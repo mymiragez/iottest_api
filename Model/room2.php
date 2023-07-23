@@ -21,6 +21,17 @@ class Room2{
     }
 
     //ฟังก์ชั่นต่าง ๆ ที่จะทำงานกับ Database ตาม API ที่เราจะทำการสร้างมันขึ้นมา ซึ่งมีมากน้อยแล้วแต่
-    //
+    //function get AlltempRoom1 ที่ทำงานกับ api_getAllTempRoom1.php
+    //วัตถุประสงค์ของฟังก์ชั่นนี้จะไปนำเอาอุณหภูมิใน Room1 ที่มีทั้งหมดมา
+  
+    function getAllTempRoom2(){
+        //คำสั่ง SQL /คำสั่ง SQL  :???????? เรียกว่า พารามิเตอร์ที่จะต้องกำหนดข้อมูลให้มัน
+        $strSQL = "SELECT * FROM room2_tb";
 
+        $stmt = $this->conn->prepare($strSQL);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
